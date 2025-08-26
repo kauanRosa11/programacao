@@ -1,0 +1,39 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: PERÍODO DE VIAGEM
+    Faça um script que pergunte ao usuário qual a distância da viagem, em quilômetros. Peça também para o usuário informar quantos quilômetros pretende viajar por dia. Calcule quantos dias serão necessários para realizar a viagem. Considere o seguinte cenário:
+
+    - Se a viagem demorar até três dias (inclusive), poderá ser realizada em "Qualquer Período";
+    - Se a viagem demorar até 10 dias (inclusive), poderá ser realizada nas "Férias de Julho";
+    - Se a viagem demorar até 20 dias (inclusive), poderá ser realizada nas "Férias de Verão";
+    - Se a viagem demorar mais de 20 dias, indique que o usuário "Deverá Trabalhar Remoto". Apresente o resultado correspondente com os dias de duração da viagem.
+    */
+
+    //ENTRADA
+
+    let kms = Number(prompt(`Qual a distancia da viagem em Km?`));
+    let kmPorDia = Number(prompt(`Quantos Kms você pretende viajar por dia?`));
+
+    //PROCESSAMENTO
+
+    let dias = kms / kmPorDia;
+    let mensagemFinal = `A viagem poderá ser realizada `;
+
+    if (dias <= 3) {
+        mensagemFinal = mensagemFinal + `em qualquer período, a viajem será feita em ${dias} dias.`;
+    } else if (dias <= 10) {
+        mensagemFinal = mensagemFinal + `nas férias de julho, a viajem será feita em ${dias} dias.`;
+    } else if (dias <= 20) {
+        mensagemFinal = mensagemFinal + `nas férias de verão, a viajem será feita em ${dias} dias.`;
+    } else if (dias > 20) {
+        mensagemFinal = mensagemFinal + `trabalhando remoto, a viajem será feita em ${dias} dias.`;
+    } else {
+        mensagemFinal = `Erro! Digite corretamente.`;
+    }
+    
+    //SAÍDA
+
+    document.write(mensagemFinal);
+
+</script>

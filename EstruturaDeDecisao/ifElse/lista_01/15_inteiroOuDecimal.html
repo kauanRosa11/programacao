@@ -1,0 +1,30 @@
+<script>
+    /*
+    PROBLEMA: NÚMERO INTEIRO OU DECIMAL
+    Faça um script que peça um número e informe se o número é inteiro ou decimal.
+    Dica: utilize uma função de arredondamento.
+    */
+
+    //ENTRADA
+
+    let numero = Number(prompt(`Insira um número`));
+
+    //PROCESSAMENTO
+
+    let inteiroOuDecimal;
+
+    if (numero >= 0 || numero <= 0) {
+      if (numero % 1 == 0) {
+        inteiroOuDecimal = `Inteiro`;
+    } else if (numero % 1 > 0) {
+        inteiroOuDecimal = `Decimal`;
+    } document.write(`Seu número é um número ${inteiroOuDecimal}`);
+    } else {
+        alert(`Valor inválido!`);
+    }
+    
+    //SAÍDA
+
+    
+
+</script>

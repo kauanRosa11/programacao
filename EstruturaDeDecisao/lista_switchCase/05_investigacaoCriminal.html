@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: INVESTIGAÇÃO CRIMINAL
+    Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+
+    alert("Responda com S - sim ou N - não.");
+    let telefonou = prompt("Telefonou para a vítima?").toUpperCase();
+    let local = prompt("Esteve no local do crime?").toUpperCase();
+    let mora = prompt("Mora perto da vítima?").toUpperCase();
+    let devendo = prompt("Devia para a vítima").toUpperCase();
+    let trabalhou = prompt("Já trabalhou com a vítima").toUpperCase();
+
+
+    //PROCESSAMENTO
+
+    let respostas = 0;
+
+    switch (telefonou == "S") {
+        case true:
+            respostas++
+            break;
+    }
+    switch (local == "S") {
+        case true:
+            respostas++
+            break;
+    }
+    switch (mora == "S") {
+        case true:
+            respostas++
+            break;
+    }
+    switch (devendo == "S") {
+        case true:
+            respostas++
+            break;
+    }
+    switch (trabalhou == "S") {
+        case true:
+            respostas++
+            break;
+    }
+
+    //SAÍDA
+
+    switch (respostas) {
+        case 0:
+        case 1:
+            document.write(`Inocente!`);
+            break;
+        case 2:
+            document.write(`Suspeito!`);
+            break;
+        case 3:
+        case 4:
+            document.write(`Cúmplice!`);
+            break;
+        case 5:
+            document.write(`Assasino!`);
+            break;
+    }
+</script>

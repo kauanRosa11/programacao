@@ -1,0 +1,44 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: CLASSIFICAÇÃO DE PRODUTO
+    Faça um script que peça para o usuário informar o código de um determinado produto e mostre a sua classificação, considerando os seguintes dados de entrada e a sua mensagem correspondente:
+    - Código 1: Alimento não-perecível
+    - Código 2, 3 ou 4: Alimento perecível
+    - Código 5 ou 6: Vestuário
+    - Código 7: Higiene Pessoal
+    - Código 8 até 15: Limpeza e Utensílios Domésticos
+    - Código 16 até 20: Outros
+    - Qualquer outro código: Código inválido
+    */
+
+    //ENTRADA
+
+    let codigo = Number(prompt(`Qual o código do produto?`));
+
+    //PROCESSAMENTO
+
+    let mensagemFinal = `O seu produto é `;
+    if (codigo <= 20 && codigo >= 1) {
+        if (codigo == 1) {
+        mensagemFinal = mensagemFinal + `um alimento não-perecível!`;
+        } else if (codigo <= 4) {
+            mensagemFinal = mensagemFinal + `um alimento perecível!`;
+        } else if (codigo <= 6) {
+            mensagemFinal = mensagemFinal + `um vestuário!`;
+        } else if (codigo == 7) {
+            mensagemFinal = mensagemFinal + `para higiene pessoal!`;
+        } else if (codigo <= 15) {
+            mensagemFinal = mensagemFinal + `para limpeza e utensílios domésticos!`;
+        } else if (codigo <= 20) {
+            mensagemFinal = mensagemFinal + `da categoria "outros"!`;
+        }
+    } else {
+        mensagemFinal = `Erro! Insira o código do produto corretamente! (1 - 20)`;
+    }
+    
+    //SAÍDA
+
+    document.write(mensagemFinal);
+
+</script>
