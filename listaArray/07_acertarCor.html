@@ -13,10 +13,24 @@
     */
 
     //ENTRADA
+    const random = Math.floor(Math.random() * 7);
 
+    let cor = prompt("Informe uma cor:\n(azul, amarelo, verde, branco, preto, marrom, cinza)").toLowerCase();
+    while (cor !== "azul" && cor !== "amarelo" && cor !== "verde" && cor !== "branco" && cor !== "preto" && cor !== "marrom" && cor !== "cinza") {
+        alert("Escolha uma cor que está na lista!");
+        cor = prompt("Informe uma cor:\n(azul, amarelo, verde, branco, preto, marrom, cinza)").toLowerCase();
+    }
 
     //PROCESSAMENTO
 
+    const cores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+
+
+    if (cores[random] == cor) {
+        document.write(`Parabéns! Você está com sorte na cor ${cor}!`);
+    } else {
+        document.write("Não foi desta vez! Tente novamente!");
+    }
 
     //SAÍDA
 

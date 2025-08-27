@@ -10,10 +10,22 @@
 
     //ENTRADA
 
+    const palavra = prompt("Digite UMA palavra:").toLowerCase();
+    while (!isNaN(palavra)) {
+        alert("Erro! Use apenas letras!");
+        palavra = prompt("Digite UMA palavra:").toLowerCase();
+    }
+    let letra = prompt(`Agora digite uma letra que deseja encontrar na palavra\n(${palavra})`).toLowerCase();
+    while (!palavra.includes(letra)) {
+        alert("A letra escolhida não existe na palavra!");
+        letra = prompt(`Agora digite uma letra que deseja encontrar na palavra\n(${palavra})`).toLowerCase();
+    }
 
     //PROCESSAMENTO
 
+    let posição = palavra.indexOf(letra);
 
     //SAÍDA
 
+    document.write(`A letra "${letra.toUpperCase()}" ocupa a posição ${posição + 1}ª na palavra "${palavra}".`);
 </script>
