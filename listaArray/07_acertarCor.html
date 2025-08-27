@@ -13,7 +13,6 @@
     */
 
     //ENTRADA
-    const random = Math.floor(Math.random() * 7);
 
     let cor = prompt("Informe uma cor:\n(azul, amarelo, verde, branco, preto, marrom, cinza)").toLowerCase();
     while (cor !== "azul" && cor !== "amarelo" && cor !== "verde" && cor !== "branco" && cor !== "preto" && cor !== "marrom" && cor !== "cinza") {
@@ -25,6 +24,7 @@
 
     const cores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
 
+    const random = Math.floor(Math.random() * 7);
 
     if (cores[random] == cor) {
         document.write(`Parabéns! Você está com sorte na cor ${cor}!`);
