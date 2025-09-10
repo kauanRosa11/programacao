@@ -7,10 +7,19 @@
 
     //ENTRADA
 
+    let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
+    let listaParEInteiros = [];
 
     //PROCESSAMENTO
 
+    for (let numero of listaDeNumeros) {
+        if (Number.isInteger(numero) && numero > 0) {
+            listaParEInteiros.push(numero)
+        }
+    }
 
     //SAÍDA
+
+    alert(`Lista original: ${listaDeNumeros}\nQuantidade de números inteiros e positivos: ${listaParEInteiros.length}\nlista final: ${listaParEInteiros.join(", ")}`);
 
 </script>
