@@ -1,0 +1,26 @@
+<script>
+/*Dado o array de nomes: ["Ana", "Carlos", "Beatriz", "Ivo", "Fernanda", "Eder"].
+Peça ao usuário para inserir um novo nome no array. 
+Em seguida, utilizando for...of, conte quantos nomes na lista possuem menos de 5 caracteres. 
+Apresente para o usuário qual o número total de nomes curtos encontrados. */
+
+//entrada
+
+ let nomes = ["Ana", "Carlos", "Beatriz", "Ivo", "Fernanda", "Eder"];
+ let nomesMenores = [];
+ 
+//processamento
+ 
+ let nome2 = [];
+  for (let nome of nomes) {
+  	nome2 = nome2.from(nome)
+	if (nome2.length < 5) {
+	nomesMenores.push(nome)
+	}
+  }
+
+// saída
+
+ alert(`O número total de nomes curtos são: ${nomesMenores.length}`)
+
+</script>
