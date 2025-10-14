@@ -6,13 +6,13 @@ Apresente para o usuário qual será o valor final da compra.*/
 
 //entrada
 
- let contasParaPagar = [50.00, 15.50, 120.00, 80];
+ let contasAPagar = [50.00, 15.50, 120.00, 80];
  let contasComJuros = [];
  const juros = Number(prompt("Quantos porcento de taxa de juros sera aplicado? (Use apenas números)"));
  
  //Processamento
  
- for (let numero of contasParaPagar) {
+ for (let numero of contasAPagar) {
  	numero = numero + (numero * juros / 100);
  	contasComJuros.push(numero);
  }

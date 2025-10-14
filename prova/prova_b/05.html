@@ -6,4 +6,23 @@
     Usando for...of, crie um novo array contendo apenas as cidades da lista original que começam com a letra informada pelo usuário.
     Ao final, exiba o novo array com as cidades que atenderam a condição estabelecida.
     */
+
+// Entrada
+
+    const listaCidades = ["Recife", "Salvador", "Rio de Janeiro", "São Paulo", "Manaus"];
+    let listaCidadesEscolhidas = [];
+    const letra = prompt("Escolha uma letra(R/S/M)").trim().charAt(0);
+
+// Processamento
+
+    for (let cidade of listaCidades) {
+        if(cidade.charAt(0).toLowerCase() === letra.toLowerCase()){
+            listaCidadesEscolhidas.push(cidade);
+        }
+    }
+
+// Saída
+
+    alert(`As cidades que começam com a letra escolhida são: ${listaCidadesEscolhidas.join(", ")}`);
+
 </script>
