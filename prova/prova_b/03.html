@@ -10,16 +10,14 @@
 // Entrada
 
     let precoProdutos = [50.00, 15.50, 120.00, 80];
-    let produtosComDesconto = [];
     const desconto = Number(prompt("Qual a porcentagem de desconto que irá ser aplicada? Use apenas números"));
 
 // Processamento
 
+    let soma = 0;
      for (let numero of precoProdutos) {
- 	numero = numero - (numero * desconto / 100);
- 	produtosComDesconto.push(numero);
+ 	soma += numero - (numero * desconto / 100);
  }
- let soma = produtosComDesconto[0] + produtosComDesconto[1] + produtosComDesconto[2] + produtosComDesconto[3];
 
 // Saída
 

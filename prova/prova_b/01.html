@@ -11,18 +11,14 @@
 
    let numeros = [15, 8, 90, 75, 102, 6, 43];
     numeros.push(Number(prompt("Insira um número inteiro na lista!")));
-    let numerosPares = [];
 
 // Processamento
 
     let soma = 0    ;
     for (let numero of numeros) {
         if (numero % 2 == 0) {
-            numerosPares.push(numero);
+            soma += numero
         }
-    }
-    for (let valor of numerosPares) {
-        soma = soma + valor
     }
 
 // Saída

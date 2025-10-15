@@ -7,17 +7,15 @@ Apresente para o usuário qual será o valor final da compra.*/
 //entrada
 
  let contasAPagar = [50.00, 15.50, 120.00, 80];
- let contasComJuros = [];
+ let soma = 0;
  const juros = Number(prompt("Quantos porcento de taxa de juros sera aplicado? (Use apenas números)"));
  
  //Processamento
  
  for (let numero of contasAPagar) {
- 	numero = numero + (numero * juros / 100);
- 	contasComJuros.push(numero);
+ 	soma += numero + (numero * juros / 100);
  }
- let soma = contasComJuros[0] + contasComJuros[1] + contasComJuros[2] + contasComJuros[3];
- 
+
  //Saída
  
  alert(`O valor final da compra é de: R$${soma}`);
