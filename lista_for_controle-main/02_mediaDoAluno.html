@@ -13,8 +13,8 @@
     //PROCESSAMENTO
     
     let notaAluno = [];
-    for (let nota = 1; nota >= notas; nota++) {
-        notaAluno.push(Number(prompt("Qual foi a nota?")));
+    for (let nota = 1; nota <= notas; nota++) {
+        notaAluno.push(Number(prompt("Qual a nota do aluno?")));
     }
     let media = 0;
     for (let nota of notaAluno) {
@@ -23,6 +23,6 @@
     media = media / notas;
     //SAÍDA
 
-    alert(`A média final do aluno é de ${media}`);
+    alert(`A média final do aluno é de ${media.toFixed(1)}`);
 
 </script>

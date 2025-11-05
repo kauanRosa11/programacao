@@ -7,10 +7,18 @@
 
     //ENTRADA
 
+    let impares = [];
 
     //PROCESSAMENTO
 
+    for (let numero = 1; numero <= 50; numero++) {
+        if ((numero % 2) != 0) {
+            impares.push(numero);
+        }
+    }
 
     //SAÍDA
+
+    alert(`Os ímpares de 1 até 50 são: ${impares.join(", ")}`);
 
 </script>
