@@ -7,10 +7,21 @@
 
     //ENTRADA
 
+    let listaNum = [];
+    for (let num = 1; num <= 5; num++) {
+        listaNum.push(Number(prompt(`Escolha cinco números (um de cada vez)! Lista atual: ${listaNum.join(", ")}.`)));
+    }
 
     //PROCESSAMENTO
 
+    let soma = 0;
+    for (let num of listaNum) {
+        soma += num;
+    }
+    let media = soma / 5;
 
     //SAÍDA
+
+    alert(`A soma e a média dos números escolhidos deram:\nSoma: ${soma};\nMédia: ${media}.`);
 
 </script>

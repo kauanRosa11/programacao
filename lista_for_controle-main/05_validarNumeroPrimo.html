@@ -11,8 +11,19 @@
 
     //PROCESSAMENTO
 
-    
+    let confirmação = 0;
+    for (let teste = 1; teste <= numero; teste++) {
+        if (numero % teste == 0) {
+            confirmação += 1;
+        }
+    }
 
     //SAÍDA
+
+    if (confirmação == 2) {
+        alert(`O número "${numero}" é primo!`);
+    } else {
+        alert(`O número "${numero}" não é primo.`);
+    }
 
 </script>

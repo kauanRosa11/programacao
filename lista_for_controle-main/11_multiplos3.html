@@ -6,10 +6,20 @@
 
     //ENTRADA
 
+    let listaFinal = [];
+    let soma = 0;
 
     //PROCESSAMENTO
 
+    for (let numero = 1; numero <= 100; numero++) {
+        if ((numero % 3) == 0) {
+            listaFinal.push(numero);
+            soma += numero
+        }
+    }
 
     //SAÍDA
+
+    alert(`Os números multiplos de 3, de 1 a 100 são: "${listaFinal.join(", ")}" e a soma dos mesmos deu ${soma}.`);
 
 </script>

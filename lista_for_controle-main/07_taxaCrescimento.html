@@ -7,10 +7,17 @@
 
     //ENTRADA
 
-    
+    let populacao = 80000
+    let anos = 0;
+
     //PROCESSAMENTO
 
+    for (populacao = 80000; populacao < 200000; populacao = populacao * 1.03) {
+        anos++
+    }
     
     //SAÍDA
+
+    alert(`Demorou ${anos} anos para que a cidade chegasse em 200000 habitantes com uma taxa de crescimento de 3% ao ano!`);
 
 </script>

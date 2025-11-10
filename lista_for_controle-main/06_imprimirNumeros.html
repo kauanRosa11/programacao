@@ -7,10 +7,27 @@
 
     //ENTRADA
 
+    let numInicial = Number(prompt("Escolha um número inical"));
+    let numFinal = Number(prompt("Insira um número final"));
+    while (numFinal <= numInicial) {
+        alert("Erro! O número final deve ser maior que o inicial!");
+        numFinal = Number(prompt("Insira um número final"));
+    }
     
     //PROCESSAMENTO
 
-    
+    let numPares = [];
+    let numImpares = [];
+    for (; numInicial <= numFinal; numInicial++) {
+        if ((numInicial % 2) == 0) {
+            numPares.push(numInicial);
+        } else {
+            numImpares.push(numInicial);
+        }
+    }
+
     //SAÍDA
+
+    alert(`As listas ímpares e pares ficaram:\nPares: ${numPares.join(", ")}\nÍmpares: ${numImpares.join(", ")}`);
 
 </script>
