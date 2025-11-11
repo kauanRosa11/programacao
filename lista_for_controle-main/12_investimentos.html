@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: INVESTIMENTOS
@@ -6,11 +7,18 @@
 
     //ENTRADA
 
-    
+    let dias = 0;
 
     //PROCESSAMENTO
 
+    for (let investimento = 1000; investimento <= 2000; investimento = investimento * 1.02) {
+        dias++;
+    }
+    
+    let diasUteis = (dias / 5) * 7;
 
     //SAÍDA
+
+    alert(`Joãozinho irá demorar ${Math.ceil(diasUteis)} dias úteis para atingir o dobro do investimento inicial!`);
 
 </script>
