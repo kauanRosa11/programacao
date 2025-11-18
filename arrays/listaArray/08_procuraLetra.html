@@ -1,0 +1,31 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: PROCURAR LETRA
+    Peça para o usuário digitar UMA palavra.
+    Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
+
+    Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
+    */
+
+    //ENTRADA
+
+    const palavra = prompt("Digite UMA palavra:").toLowerCase();
+    while (!isNaN(palavra)) {
+        alert("Erro! Use apenas letras!");
+        palavra = prompt("Digite UMA palavra:").toLowerCase();
+    }
+    let letra = prompt(`Agora digite uma letra que deseja encontrar na palavra\n(${palavra})`).toLowerCase();
+    while (!palavra.includes(letra)) {
+        alert("A letra escolhida não existe na palavra!");
+        letra = prompt(`Agora digite uma letra que deseja encontrar na palavra\n(${palavra})`).toLowerCase();
+    }
+
+    //PROCESSAMENTO
+
+    let posição = palavra.indexOf(letra);
+
+    //SAÍDA
+
+    document.write(`A letra "${letra.toUpperCase()}" ocupa a posição ${posição + 1}ª na palavra "${palavra}".`);
+</script>

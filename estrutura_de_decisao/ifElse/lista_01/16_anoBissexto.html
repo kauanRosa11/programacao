@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ANO BISSEXTO
+    Recebe um ano e informa se ele é bissexto ou não.
+    */
+
+    //ENTRADA
+
+    let ano = Number(prompt(`Fale um ano`));
+    
+    //PROCESSAMENTO
+
+    let mensagemFinal;
+    if (ano > 0) {
+        if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+            mensagemFinal = `é bissexto`;
+        } else {
+            mensagemFinal = `não é bissexto`;
+        } document.write(`Este ano ${mensagemFinal}`);
+    } else {
+        alert(`Valor inválido!`);
+    }
+
+    //SAÍDA
+
+</script>

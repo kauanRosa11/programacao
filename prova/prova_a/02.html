@@ -1,0 +1,23 @@
+<script>
+/*Você tem um array com os valores de contas não pagas: [50.00, 15.50, 120.00, 80].
+Pergunte ao usuário quanto será o Juro aplicado nos valores que estão no Array. Considere que será a mesma taxa de juro para todos. 
+Usando for...of, calcule o custo total de todas as contas já com o juro aplicado.
+Apresente para o usuário qual será o valor final da compra.*/
+
+//entrada
+
+ let contasAPagar = [50.00, 15.50, 120.00, 80];
+ let soma = 0;
+ const juros = Number(prompt("Quantos porcento de taxa de juros sera aplicado? (Use apenas números)"));
+ 
+ //Processamento
+ 
+ for (let numero of contasAPagar) {
+ 	soma += numero + (numero * juros / 100);
+ }
+
+ //Saída
+ 
+ alert(`O valor final da compra é de: R$${soma}`);
+
+</script>

@@ -1,0 +1,89 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: LOJA DE VEÍCULOS
+    Crie os seguintes arrays:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    Apresente a lista final de cada tipo de veículo.
+    */
+
+    //ENTRADA
+
+    alert(`Lista carros SUV:\n"Tiggo", "Sportage", "Tucson", "EcoSport"`);
+    alert(`Lista carros Sedan:\n"Civic", "Corolla", "Arizzo", "Fusion"`);
+    alert(`Lista carros Hatch:\n"308", "Focus", "i30"`)
+
+    let tipo1 = prompt("Qual o tipo do primeiro carro que deseja adicionar na lista?\nTipos: SUV - Sedan - Hatch.").toLowerCase();
+    while (tipo1 != "suv" && tipo1 != "sedan" && tipo1 != "hatch") {
+        alert("insira um dos três tipos mencionados.");
+        tipo1 = prompt("Qual o tipo do primeiro carro que deseja adicionar na lista?\nTipos: SUV - Sedan - Hatch.").toLowerCase();
+    }
+
+    let carro1 = prompt("Insira o primeiro carro que deseja adicionar na lista");
+    while (!isNaN(carro1)) {
+        alert("Use apenas letras.");
+        carro1 = prompt("Insira o carro que deseja adicionar na lista");
+    }
+
+    let tipo2 = prompt("Qual o tipo do segundo carro que deseja adicionar na lista? \nTipos: SUV - Sedan - Hatch.").toLowerCase();
+    while (tipo2 != "suv" && tipo2 != "sedan" && tipo2 != "hatch") {
+        alert("insira um dos três tipos mencionados.");
+        tipo2 = prompt("Qual o tipo do segundo carro que deseja adicionar na lista?\nTipos: SUV - Sedan - Hatch.").toLowerCase();
+    }
+
+    let carro2 = prompt("Insira o segundo carro que deseja adicionar na lista");
+    while (!isNaN(carro2)) {
+        alert("Use apenas letras.");
+        carro2 = prompt("Insira o segundo carro que deseja adicionar na lista");
+    }
+
+    let tipo3 = prompt("Qual o tipo do terceiro carro que deseja adicionar na lista? Tipos:\nSUV - Sedan - Hatch.").toLowerCase();
+    while (tipo3 != "suv" && tipo3 != "sedan" && tipo3 != "hatch") {
+        alert("insira um dos três tipos mencionados.");
+        tipo3 = prompt("Qual o tipo do terceiro carro que deseja adicionar na lista? Tipos:\nSUV - Sedan - Hatch.").toLowerCase();
+    }
+
+    let carro3 = prompt("Insira o terceiro carro que deseja adicionar na lista");
+    while (!isNaN(carro3)) {
+        alert("Use apenas letras.");
+        carro3 = prompt("Insira o terceiro carro que deseja adicionar na lista");
+    }
+    //PROCESSAMENTO
+
+    let listaSuv = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let listaSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let listaHatch = ["308", "Focus", "i30"];
+
+    if (tipo1 == "suv") {
+        listaSuv.push(carro1);
+    } else if (tipo1 == "sedan") {
+        listaSedan.push(carro1);
+    } else if (tipo1 == "hatch") {
+        listaHatch.push(carro1);
+    }
+
+    if (tipo2 == "suv") {
+        listaSuv.push(carro2);
+    } else if (tipo2 == "sedan") {
+        listaSedan.push(carro2);
+    } else if (tipo2 == "hatch") {
+        listaHatch.push(carro2);
+    }
+
+    if (tipo3 == "suv") {
+        listaSuv.push(carro3);
+    } else if (tipo3 == "sedan") {
+        listaSedan.push(carro3);
+    } else if (tipo3 == "hatch") {
+        listaHatch.push(carro3);
+    }
+    //SAÍDA
+
+    alert(`A lista final de cada tipo de carro:\nSUV: ${listaSuv.join(" - ")}\nSedan: ${listaSedan.join(" - ")}\nHatch: ${listaHatch.join(" - ")}.`);
+
+</script>

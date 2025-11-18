@@ -1,0 +1,102 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: ESTAÇÃO DO ANO
+    Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+    De acordo com as respostas, informe qual a estação do ano correspondente.
+    */
+
+    //ENTRADA
+
+    let hemisferio = prompt(`Informe qual hemisfério você está usando "S" para Sul e "N" para norte`).toUpperCase();
+    let mes = Number(prompt(`Informe o mês atual(em números)`));
+
+    //PROCESSAMENTO
+
+    let mensagemFinal;
+    let estação;
+    switch (hemisferio) {
+        case "N":
+            switch (mes > 12) {
+                case true:
+                    mensagemFinal = `Erro! Insira o mês de 1 - 12.`;
+                    break;
+                case false:
+                    switch (mes) {
+                        case 1:
+                        case 2:
+                        case 3:
+                            estação = `inverno!`;
+                            break;
+                        case 4:
+                        case 5:
+                        case 6:
+                            estação = `primavera!`;
+                            break;
+                        case 7:
+                        case 8:
+                        case 9:
+                            estação = `verão!`;
+                            break;
+                        case 10:
+                        case 11:
+                        case 12:
+                            estação = `outono!`;
+                            break;
+                    }break;
+            }
+        break;
+        case "S":
+            switch (mes > 12) {
+                case true:
+                    mensagemFinal = `Erro! Insira o mês de 1 - 12.`;
+                    break;
+                case false:
+                    switch (mes) {
+                        case 1:
+                        case 2:
+                        case 3:
+                            estação = `verão!`;
+                            break;
+                        case 4:
+                        case 5:
+                        case 6:
+                            estação = `outono!`;
+                            break;
+                        case 7:
+                        case 8:
+                        case 9:
+                            estação = `inverno!`;
+                            break;
+                        case 10:
+                        case 11:
+                        case 12:
+                            estação = `primavera!`;
+                    }
+                    break;
+            }
+            break;
+        default:
+            mensagemFinal = `Valor inválido! Use "S" para Sul e "N" para norte.`;
+            break;
+    }
+
+
+    //SAÍDA
+
+    switch (mensagemFinal == `Valor inválido! Use "S" para Sul e "N" para norte.`) {
+        case true:
+            alert(`Valor inválido! Use "S" para Sul e "N" para norte.`);
+            break;
+        case false:
+            switch (mensagemFinal == `Erro! Insira o mês de 1 - 12.`) {
+                case true:
+                    alert(`Erro! Insira o mês de 1 - 12.`);
+                    break;
+                default:
+                    document.write(`Você está no(a) ${estação}`);
+                    break;
+            }
+    }
+
+</script>

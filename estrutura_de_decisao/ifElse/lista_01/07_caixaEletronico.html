@@ -1,0 +1,28 @@
+<script>
+    /*
+    PROBLEMA: CAIXA ELETRÔNICO
+    Faça um script para um caixa eletrônico. O script deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O script não deve se preocupar com a quantidade de notas existentes na máquina.
+
+    Exemplo: Para sacar a quantia de 256 reais, o script fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
+    Exemplo: Para sacar a quantia de 399 reais, o script fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
+    */
+
+    //ENTRADA
+
+    let saque = Number(prompt("Qual o valor que você deseja sacar?(Valor minimo: R$10 e máximo: R$600.)"));
+
+    //PROCESSAMENTO
+
+    if ((saque < 10) || (saque > 600)) {
+        document.write("Valor invalido");
+    } else {
+
+    let n100 = Math.floor(saque / 100);
+    let n50 = Math.floor((saque % 100) / 50);
+    let n10 = Math.floor(((saque % 100) % 50) / 10);
+    let n5 = Math.floor((((saque % 100) % 50) % 10) / 5);
+    let n1 = Math.floor((((saque % 100) % 50) % 10) % 5);    
+    document.write(`Notas de cem: ${n100}, notas de 50: ${n50}, notas de 10: ${n10}, notas de 5: ${n5} e moedas de 1: ${n1}.`);
+    } //Não consegui fazer a saída "bonita" em if else como na 6.
+
+</script>
