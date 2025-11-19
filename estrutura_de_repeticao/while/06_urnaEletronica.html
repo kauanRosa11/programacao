@@ -17,14 +17,62 @@
     b) A porcentagem de votos nulos;
     c) A porcentagem de votos brancos;
     d) O candidato vencedor.
-    */
+    */ 
 
     //ENTRADA
 
-
+    let votosJoao = 0;
+    let votosMaria = 0;
+    let votosNulo = 0;
+    let votosBranco = 0;
+    let porcentagemNulo = 0;
+    let porcentagemBranco = 0;
+    let vencedor = "";
+    let votos = 1;
+    let urna = 1;
+    
     //PROCESSAMENTO
+    
+    while (urna != 0) {
+        urna = Number(prompt(`Escolha uma das opções para votar:\n1. Candidato Joãozinho\n2. Candidato Mariazinha\n3. Nulo\n4. Branco\n(${votos}º voto)\nPara mostrar os resultados insira "0"\nInsira aqui apenas o número da sua opção de escolha:`));
+        while (urna != 0 && urna != 1 && urna != 2 && urna != 3 && urna != 4) {
+            alert(`Indisponível. Use apenas os números a frente das opções!`);
+            urna = Number(prompt(`Escolha uma das opções para votar:\n1. Candidato Joãozinho\n2. Candidato Mariazinha\n3. Nulo\n4. Branco\n(${votos}º voto)\nPara mostrar os resultados insira "0"\nInsira aqui apenas o número da sua opção de escolha:`));
+        }
+        if (urna == 1) {
+            votosJoao++;
+        } else if (urna == 2) {
+            votosMaria++;
+        } else if (urna == 3) {
+            votosNulo++;
+        } else if (urna == 4) {
+            votosBranco++;
+        }
+        votos++
+    }
+    
+    porcentagemNulo = (votosNulo / (votos - 2)) * 100;
+    porcentagemBranco = (votosBranco / (votos - 2)) * 100;
 
+    if (votosJoao > votosMaria) {
+        vencedor = "Joaozinho";
+    } else if (votosJoao < votosMaria) {
+        vencedor = "Mariazinha";
+    } else if (votosJoao == votosMaria) {
+        vencedor = "Empate";
+    }
 
     //SAÍDA
+        if (votos - 2 == 0) {
+            alert(`Nenhum voto foi registrado.`);
+            alert(`Eleições concluídas!`);
+        }
+        else if (vencedor.toLowerCase() == "joaozinho" || vencedor.toLowerCase() == "mariazinha") {
+            alert(`Joãozinho: Recebeu ${votosJoao} votos!\nMariazinha: recebeu ${votosMaria} votos!\n${porcentagemNulo.toFixed(1)}% dos votos foram nulos.\n${porcentagemBranco.toFixed(1)}% dos votos foram brancos.\nE o vencedor foi: ${vencedor}!`);
+            alert(`Eleições concluídas!`);
+        }  else if (vencedor.toLowerCase() == "empate") {
+            alert(`Joãozinho: Recebeu ${votosJoao} votos!\nMariazinha: recebeu ${votosMaria} votos!\n${porcentagemNulo.toFixed(1)}% dos votos foram nulos.\n${porcentagemBranco.toFixed(1)}% dos votos foram brancos.\nE os candidatos empataram!`);
+            alert(`Eleições concluídas!`);
+        }
 
 </script>

@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Inversão de Número
     /*
@@ -8,11 +9,30 @@
     */
 
     //ENTRADA
-
-
+    
+    let numero = Number(prompt(`Insira um número que deseja inverter:`));
+    while (isNaN(numero)) {
+        alert(`Responda apenas com números!`);
+        numero = Number(prompt(`Insira um número que deseja inverter:`));
+    }
+    let pegar;
+    let posicao = 0;
+    let trocar;
+    numero = numero + ``;
+    pegar = numero.split(``);
+    let tamanho = pegar.length;
+    
     //PROCESSAMENTO
 
+    let invertido = [];
 
+    while (posicao < tamanho) {
+        trocar = pegar.pop();
+        invertido.push(trocar);
+        posicao++;}
+        
     //SAÍDA
+
+    alert(invertido.join(``));
 
 </script>

@@ -6,10 +6,32 @@
 
     //ENTRADA
 
+    let sequencia = Number(prompt(`Quantos números da sequencia de Fibonacci você deseja obter?`));
+    while (!Number.isInteger(sequencia) || sequencia < 0 || isNaN(sequencia)) {
+        alert(`Erro! Digite apenas números inteiros e positivos.`);
+        Number(prompt(`Quantos números da sequencia de Fibonacci você deseja obter?`));
+    }
 
     //PROCESSAMENTO
 
+    let num1 = 0;
+    let num2 = 1;
+    let num3 = 0;
+    let posicao = 0;
+    let listaFibonacci = [];
+    listaFibonacci.push(num1);
+    listaFibonacci.push(num2);
+
+    while (posicao < sequencia - 2) {
+        num3 = num1 + num2;
+        num1 = num2;
+        num2 = num3;
+        listaFibonacci.push(num3);
+        posicao++;
+    }
 
     //SAÍDA
     
+    alert(listaFibonacci.join(", "))
+
 </script>

@@ -6,10 +6,31 @@
     
     //ENTRADA
 
+    let numeros = [];
 
     //PROCESSAMENTO
 
+    let quantNumEscolhidos = 0;
+    let numero = 1;
+    let soma = 0;
+    while (numero != 0) {
+        numero = Number(prompt(`(Para parar de adicionar números, insira "0")\nQuantidade de números já escolhidos: ${quantNumEscolhidos}\nEscolha um número:`));
+        if (numero != 0) {
+            numeros.push(numero);
+        }
+        quantNumEscolhidos++
+    }
+
+    for (let item of numeros) {
+        soma += item;
+    }
 
     //SAÍDA
     
+    if (numeros.length == 0) {
+        alert(`Nenhum número inserido`)
+    } else {
+        alert(`A soma dos números inseridos deu: ${soma}`);
+    }
+
 </script>

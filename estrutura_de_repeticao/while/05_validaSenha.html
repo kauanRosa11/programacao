@@ -7,22 +7,17 @@
 
     //ENTRADA
 
-    let senha = [];
-    for (let teste = 1; teste <= 4; teste++) {
-      let definicao = Number(prompt(`Escolha o ${teste}º número da senha:`));
-        while (definicao < 0 || definicao > 9) {
-            alert(`Escolha um número de 0 a 9 para cada digito da senha!`);
-            definicao = Number(prompt(`Escolha o ${teste}º número da senha:`));
-        }
-        senha.push(definicao);
-    }
-
-
+    let senha = prompt(`Insira uma senha de 4 números inteiros!`).trim();
+    
     //PROCESSAMENTO
-
+    
+    while (!Number.isInteger(senha) && senha.length < 4 || senha.length > 4 || isNaN(senha)) {
+        alert(`Senha incorreta!`);
+        senha = prompt(`Insira uma senha de 4 números inteiros!`).trim();
+    }
 
     //SAÍDA
 
-    alert(senha)
+    alert(`Senha correta!`);
 
 </script>
