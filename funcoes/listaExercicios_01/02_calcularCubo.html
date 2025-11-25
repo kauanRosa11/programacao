@@ -1,0 +1,28 @@
+<script>
+    /*
+    PROBLEMA: CALCULAR CUBO DE UM NÚMERO
+    Peça para o usuário informar um número inteiro.
+    Desenvolva um programa que contenha uma função que calcule o cubo desse número. Apresente o resultado para o usuário.
+    */
+
+    //ENTRADA
+
+    let num = Number(prompt(`Insira um número inteiro que deseja saber o cubo do mesmo:`));
+    while (!Number.isInteger(num)) {
+        alert(`Use apenas números inteiros!`);
+        num = Number(prompt(`Insira um número inteiro que deseja saber o cubo do mesmo:`));
+    }
+    let numQuadrado = 0;
+
+    //PROCESSAMENTO
+
+    function quadrado (x) {
+       numQuadrado = x * x;
+    }
+
+    //SAÍDA
+
+    quadrado(num);
+    alert(`O quadrado do número escolhido é: ${numQuadrado}`);
+
+</script>
