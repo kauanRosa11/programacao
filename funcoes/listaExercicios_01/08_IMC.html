@@ -7,10 +7,23 @@
 
     //ENTRADA
 
+    let peso = Number(prompt(`Qual o seu peso?`));
+    while (peso < 1) {
+        alert(`Seu peso deve ser maior que 0!`);
+        peso = Number(prompt(`Qual o seu peso?`));
+    }
+    let altura = Number(prompt(`Qual sua altura em metros?`));
+    let IMC = 0
 
     //PROCESSAMENTO
 
+    function calculadora (p, h) {
+        IMC = p / h**2;
+    }
 
     //SAÍDA
+
+    calculadora(peso, altura);
+    alert(`Seu IMC é de: ${IMC.toFixed(2)};`);
 
 </script>

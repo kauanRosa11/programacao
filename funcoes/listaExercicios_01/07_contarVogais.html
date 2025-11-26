@@ -8,10 +8,24 @@
 
     //ENTRADA
 
+    let vogais = ["a", "e", "i", "o", "u"];
+    let palavra = prompt(`Escolha um palavra:`).toLowerCase();
+    let separada = palavra.split("");
+    let resultado = [];
 
     //PROCESSAMENTO
 
+    function quantidadeVogais () {
+        for (let posicao = 0; posicao < palavra.length; posicao++) {
+            if (vogais.includes(separada[posicao])) {
+                resultado.push(separada[posicao]);
+            }
+        }
+    }
 
     //SAÍDA
+
+    quantidadeVogais();
+    alert(`A palavra "${palavra}" tem ${resultado.length} vogais!`);
 
 </script>

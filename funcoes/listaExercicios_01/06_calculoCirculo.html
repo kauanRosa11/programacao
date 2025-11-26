@@ -9,10 +9,21 @@
 
     //ENTRADA
 
+    const pi = 3.14;
+    let r = Number(prompt(`Qual o raio do circulo?`));
+    let area = 0;
+    let perimetro = 0;
 
     //PROCESSAMENTO
 
+    function calculadora (raio) {
+        area = pi * raio**2;
+        perimetro = 2 * pi * raio;
+    }
 
     //SAÍDA
+
+    calculadora(r);
+    alert(`Resultados:\nA área deste circulo é: ${area.toFixed(2)}\nO perímetro do seu circulo é: ${perimetro.toFixed(2)}`);
 
 </script>

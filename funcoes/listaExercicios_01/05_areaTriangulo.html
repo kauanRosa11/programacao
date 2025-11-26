@@ -7,10 +7,19 @@
 
     //ENTRADA
 
+    const base = Number(prompt(`Qual o tamanho da base do seu triângulo?`));
+    const altura = Number(prompt(`Qual a altura do seu triângulo?`));
+    let area = 0;
 
     //PROCESSAMENTO
 
+    function calculadora (b, h) {
+      area = (b * h) / 2;
+    }
 
     //SAÍDA
+
+    calculadora(base, altura);
+    alert(`A área de seu triângulo é de: ${area}`);
 
 </script>
