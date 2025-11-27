@@ -6,15 +6,24 @@
 
     //ENTRADA
 
-    const num = Number(prompt(`Informe um número`));
+    let num = Number(prompt(`Informe um número`));
     let fatorial = 0;
+    let numPrimeiro = 1;
+    let numSegundo = 2;
 
     //PROCESSAMENTO
 
     function calculadora (n) {
-        fatorial = 
+        for (let multiplicacao = 1; multiplicacao <= n; multiplicacao++) {
+            numSegundo *= numPrimeiro;
+            numPrimeiro++;
+            fatorial = numSegundo / 2;
+        } 
     }
 
     //SAÍDA
+
+    calculadora(num);
+    alert(`O fatorial do número "${num}" é de ${fatorial}.`);
 
 </script>

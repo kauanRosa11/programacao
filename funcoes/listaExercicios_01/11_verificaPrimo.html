@@ -6,10 +6,30 @@
 
     //ENTRADA
 
+    let num = Number(prompt(`Insira um número que deseja saber se é primo ou não:`));
+    while (!Number.isInteger(num) || isNaN(num)) {
+        alert(`Digite apenas valores números inteiros!`);
+        num = Number(prompt(`Insira um número que deseja saber se é primo ou não:`));
+    }
 
     //PROCESSAMENTO
 
+    let validar = 0;
+    function calculadora (n) {
+        for (let i = 0; i <= n; i++) {
+            if ((n % i) == 0) {
+                validar++;
+            }
+        }
+    }
 
     //SAÍDA
+
+    calculadora(num);
+    if (validar == 2 || num == 1) {
+        alert(`O número "${num}" é primo!`);
+    } else {
+        alert(`O número "${num}" não é primo!`);
+    }
 
 </script>

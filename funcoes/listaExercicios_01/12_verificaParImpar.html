@@ -6,10 +6,26 @@
 
     //ENTRADA
 
+    let num = Number(prompt(`Insira um número:`));
+    while (isNaN(num)) {
+        alert(`Digite apenas números!`);
+        num = Number(prompt(`Insira um número:`));
+    }
+    let parOuImpar
 
     //PROCESSAMENTO
 
+    function parImpar (n) {
+        if ((n % 2) == 0) {
+            parOuImpar = "par";
+        } else {
+            parOuImpar = "ímpar";
+        }
+    }
 
     //SAÍDA
+
+    parImpar(num);
+    alert(`Este número é ${parOuImpar}!`);
 
 </script>

@@ -7,10 +7,24 @@
 
     //ENTRADA
 
+    let frase = prompt(`Escreva uma palavra ou uma frase:`).toLowerCase();
+    let letra = prompt(`Escolha um letra que deseja saber quantas vezes se repete na frase ou palavra citada anteriormente:`).toLowerCase();
+    let separada = frase.split("");
+    let listaFinal = [];
 
     //PROCESSAMENTO
 
+    function quantasLetras () {
+        for (let i = 0; i <= frase.length; i++) {
+            if (separada[i] === letra) {
+                listaFinal.push(separada[i]);
+            }
+        }
+    }
 
     //SAÍDA
+
+    quantasLetras();
+    alert(`A frase ou palavra "${frase}" contém ${listaFinal.length} "${letra}"`);
 
 </script>
