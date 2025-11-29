@@ -9,6 +9,10 @@
     //ENTRADA
 
     let nome = prompt(`Qual o seu nome?`);
+    while(!isNaN(nome)) {
+        alert("Insira apenas letras!");
+        nome = prompt(`Qual o seu nome?`);
+    }
 
     //PROCESSAMENTO
 
