@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+/*
+PROBLEMA: Considere o seguinte array com as notas finais dos alunos: [5.5, 9.0, 3.2, 7.5, 8.0]. Peça para o usuário inserir a nota de um novo aluno e a adicione ao array. Usando for...of, crie um novo array contendo apenas as notas dos alunos que foram aprovados (nota maior ou igual a 7.0). Ao final, exiba a lista de notas dos alunos aprovados.
+*/
+
+//ENTRADA
+
+let notasFinais = [5.5, 9.0, 3.2, 7.5, 8.0];
+let notasAprovados = [];
+let notasReprovados = [];
+let notaAluno = Number(prompt(`Insira a nota de um novo aluno:`));
+while (isNaN(notaAluno) || notaAluno < 0 || notaAluno > 10) {
+    alert(`Erro! Digite apenas valores númericos inteiros e entre 0 - 10!`);
+    notaAluno = Number(prompt(`Insira a nota de um novo aluno:`));
+}
+notasFinais.push(notaAluno);
+
+//PROCESSAMENTO
+
+for (let nota of notasFinais) {
+    if (nota >= 7) {
+        notasAprovados.push(nota);
+    } else {
+        notasReprovados.push(nota);
+    }
+}
+
+//SAÍDA
+
+alert(`O resultado final foi:\nNota alunos aprovados: ${notasAprovados.join(", ")}\nNota alunos reprovados: ${notasReprovados.join(", ")}`);
+
+</script>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+/*
+PROBLEMA: Sua loja tem uma lista de cupons de desconto válidos: ['PROMO10', 'MEGA20', 'SALDAO50']. Peça para o usuário digitar um cupom de desconto. Usando um laço, verifique se o cupom inserido pelo usuário existe na lista de cupons válidos. Exiba uma mensagem para o usuário informando se o "Cupom é válido!" ou "Cupom inválido.".
+*/
+
+//ENTRADA
+
+alert(`Cupons: "PROMO10", "MEGA20", "SALDAO50"`);
+let cupons = ['PROMO10', 'MEGA20', 'SALDAO50'];
+let insira = prompt(`Insira um cupom de desconto:`);
+let validar = 0;
+
+//PROCESSAMENTO
+
+for (let cupom of cupons) {
+    if (cupom.toLowerCase() == insira) {
+        validar++;
+    }}
+
+// SAÍDA
+
+    if (validar == 1) {
+        alert(`Cupom válido!`);
+    } else {
+        alert(`Cupom inválido!`);
+    }
+
+</script>

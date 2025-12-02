@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+/*
+PROBLEMA: Você recebeu um array com temperaturas em Celsius: [0, 15, 25, 30, 12]. Peça ao usuário para inserir uma nova temperatura em Celsius e a adicione ao array. Usando for...of, crie um novo array com todas as temperaturas convertidas para Fahrenheit. A fórmula é: F = (C * 9/5) + 32. Mostre o novo array com as temperaturas em Fahrenheit.
+*/
+
+//ENTRADA
+
+let celsius = [0, 15, 25, 30, 12];
+let fahrenheit = [];
+let adicionar = Number(prompt(`Lista atual: ${celsius.join(", ")}\n\nInsira uma temperatura em celsius na lista:`));
+while (!Number.isInteger(adicionar) || isNaN(adicionar)) {
+    alert(`Erro! Insira apenas valores númericos inteiros.`);
+    adicionar = Number(prompt(`Lista atual: ${celsius.join(", ")}\n\nInsira uma temperatura em celsius na lista:`));
+}
+celsius.push(adicionar);
+
+//PROCESSAMENTO
+
+for (let temp of celsius) {
+    fahrenheit.push((temp * 9/5) + 32);
+}
+
+//SAÍDA
+
+    alert(`Transformando as tempreraturas de celsius para fahrenheit ficou: ${fahrenheit.join(", ")}`);
+
+</script>

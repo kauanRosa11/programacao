@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+/*
+PROBLEMA: Dado o array de palavras: ["Javascript", "Python", "Logica", "Computador"]. Peça para o usuário adicionar uma nova palavra à lista. Usando for...of, conte quantas palavras na lista começam com uma vogal (A, E, I, O, U), independentemente de serem maiúsculas ou minúsculas. Apresente ao usuário o número total de palavras que começam com vogal.
+*/
+
+//ENTRADA
+
+let palavras = ["Javascript", "Python", "Logica", "Computador"];
+let vogais = ["a", "e", "i", "o", "u"];
+let listaFinal = [];
+palavras.push(prompt(`Lista atual: ${palavras.join(", ")};\nInsira uma palavra nova na lista:`));
+
+//PROCESSAMENTO
+
+    for (let palavra of palavras) {
+        palavra = palavra.charAt(0).toLowerCase();
+        for (let i = 0; i <= 5; i++) {
+            if (palavra == vogais[i]) {
+                listaFinal.push(palavra);
+            }}}
+
+//SAÍDA
+
+    alert(`O número de palavras que começam com uma vogal são: ${listaFinal.length}`);
+
+</script>

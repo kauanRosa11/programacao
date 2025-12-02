@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+/*
+PROBLEMA: Dado o array de números: [22, 5, 8, 19, 25, 30]. Peça ao usuário para inserir um novo número no array. Usando for...of, separe os números da lista em dois novos arrays: um contendo apenas os números pares e outro apenas os ímpares. Ao final, exiba ambos os arrays para o usuário, um com os pares e outro com os ímpares.
+*/
+
+//ENTRADA
+
+let numeros = [22, 5, 8, 19, 25, 30];
+let impar = [];
+let par = [];
+let adicionar = Number(prompt(`Lista atual: ${numeros.join(", ")}\n\nInsira um número novo na lista:`));
+while (!Number.isInteger(adicionar) || isNaN(adicionar)) {
+    alert(`Erro! Insira apenas valores númericos inteiros.`);
+    Number(prompt(`Lista atual: ${numeros.join(", ")}\n\nInsira um número novo na lista:`));
+}
+numeros.push(adicionar);
+
+//PROCESSAMENTO
+
+ for (let num of numeros) {
+    if ((num % 2) == 0) {
+        par.push(num);
+    } else {
+        impar.push(num);
+    }
+ }
+
+//SAÍDA
+
+ alert(`Resultado:\nPares: ${par.join(", ")}\n\nÍmpares: ${impar.join(", ")}`);
+
+</script>
